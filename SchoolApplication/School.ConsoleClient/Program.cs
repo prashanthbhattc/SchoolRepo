@@ -10,7 +10,7 @@ namespace School.ConsoleClient
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" hello world");
+            Console.WriteLine(" hello world wel come to git hub");
         }
     }
 }
