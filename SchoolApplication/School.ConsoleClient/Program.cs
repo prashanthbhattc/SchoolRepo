@@ -11,6 +11,8 @@ namespace School.ConsoleClient
         static void Main(string[] args)
         {
             Console.WriteLine(" hello world wel come to git hub");
+
+            Console.WriteLine("Hello");
         }
     }
 }
