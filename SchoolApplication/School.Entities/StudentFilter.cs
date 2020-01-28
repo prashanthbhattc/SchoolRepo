@@ -13,4 +13,5 @@ namespace School.Entities
         public string PhoneNumber { get; set; }
          public string Gender { get; set; }
     }
+    
 }
