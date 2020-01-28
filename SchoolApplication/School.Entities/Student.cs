@@ -27,7 +27,8 @@ namespace School.Entities
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
     }
-public class Examination_Info
+
+     public class Examination_Info
     {
         public string SubjectEntry { get; set; }
         public string ExamEntry { get; set; }
@@ -35,4 +36,14 @@ public class Examination_Info
         public string ScoreReport { get; set; }
         
     }
+
+      public class Library_info
+    {
+        public string Bookcode { get; set; }
+        public int Bookentry { get; set; }
+        public int Bookissue { get; set; }
+        public int Bookreturn { get; set; }
+        
     }
+}
+
