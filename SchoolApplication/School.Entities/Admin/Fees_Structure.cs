@@ -10,3 +10,4 @@ public class Fees_structure
     public float currentBalance { get; set; }
 
 }
+ 
