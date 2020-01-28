@@ -6,12 +6,8 @@ public class Employee_info
     public string emp_name { set; get; }
     public string emp_email { set; get; }
     public float  emp_salary { set; get; }
-    public string emp_dob { set; get; }
+    public string emp_dateofbirth { set; get; }
     public string emp_doj { set; get; }
     public string emp_bloodgroup { set; get; }
     public double emp_contact_no { set; get; } 
-
-   
-
-
 }
