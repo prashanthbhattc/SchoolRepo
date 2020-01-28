@@ -9,5 +9,6 @@ public class Fees_structure
     public float amountPaid { get; set; }
     public float currentBalance { get; set; }
 
+
 }
  
