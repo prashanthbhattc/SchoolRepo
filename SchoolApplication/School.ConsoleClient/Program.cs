@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace School.ConsoleClient
-{
+{ 
     class Program
     {
         static void Main(string[] args)
@@ -13,6 +13,9 @@ namespace School.ConsoleClient
             Console.WriteLine(" hello world wel come to git hub");
 
             Console.WriteLine("Hello  hddd");
+            Console.WriteLine("HELLO");
+
+           
         }
     }
 }
