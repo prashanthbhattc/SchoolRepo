@@ -9,9 +9,9 @@ namespace School.Manager.Interfaces
 {
    public  interface IStudentFacade
     {
-        int create(Student student);
-        bool update(int id, Student student);
-        List<Student> search(StudentFilter studentFilter);
+        int create(Student_Info student);
+        bool update(int id, Student_Info student);
+        List<Student_Info> search(StudentFilter studentFilter);
 
     }
 }

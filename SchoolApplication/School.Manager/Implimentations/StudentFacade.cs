@@ -10,17 +10,17 @@ namespace School.Manager.Implimentations
 {
     public class StudentFacade : IStudentFacade
     {
-        public int create(Student student)
+        public int create(Student_Info student)
         {
             throw new NotImplementedException();
         }
 
-        public List<Student> search(StudentFilter studentFilter)
+        public List<Student_Info> search(StudentFilter studentFilter)
         {
             throw new NotImplementedException();
         }
 
-        public bool update(int id, Student student)
+        public bool update(int id, Student_Info student)
         {
             throw new NotImplementedException();
         }
