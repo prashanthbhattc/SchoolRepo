@@ -10,10 +10,18 @@ namespace School.ConsoleClient
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" hello world wel come to git hub");
 
-            Console.WriteLine("Hello  hddd");
-            Console.WriteLine("HELLO");
+            CategoryController controller = new CategoryController();
+
+            var data = controller.Get();
+            Console.WriteLine("------------- categories----------");
+            foreach (var item in data)
+            {
+                Console.WriteLine($"the category Id {item.Id} and category name {item.Name} ");
+            }
+
+            Console.ReadLine();
+           
 
            
         }

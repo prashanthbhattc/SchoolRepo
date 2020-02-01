@@ -41,16 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implimentations\CategoryManager.cs" />
+    <Compile Include="Interfaces\ICategoryManager.cs" />
+    <Compile Include="Interfaces\IFoodItemManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Implimentations\" />
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\School.Entities\School.Entities.csproj">
       <Project>{6495f657-5214-4057-a5f7-0aa70dd7c491}</Project>
       <Name>School.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\School.Repository\School.Repository.csproj">
+      <Project>{91C99BA8-F86D-4BF6-98BB-3C23392F2104}</Project>
+      <Name>School.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

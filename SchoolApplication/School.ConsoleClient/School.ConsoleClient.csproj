@@ -43,11 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\School.Entities\School.Entities.csproj">
+      <Project>{6495F657-5214-4057-A5F7-0AA70DD7C491}</Project>
+      <Name>School.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\School.Manager\School.Manager.csproj">
+      <Project>{7FAB723D-4772-4B96-A66D-9A2B735B41A5}</Project>
+      <Name>School.Manager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
