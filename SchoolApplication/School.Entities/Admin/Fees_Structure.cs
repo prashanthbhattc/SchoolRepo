@@ -1,9 +1,9 @@
 ﻿using System;
 
-public class Fees_structure
+public class Fees
 {
-    public float monthlyFee { get; set; }
-    public float transportFee { get; set; }
+    public float MonthlyFee { get; set; }
+    public float TransportFee { get; set; }
     public float libraryFineFee { get; set; }
     public float totalFee { get; set; }
     public float amountPaid { get; set; }
