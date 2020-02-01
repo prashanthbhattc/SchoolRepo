@@ -41,11 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implimentations\StudentFacade.cs" />
-    <Compile Include="Interfaces\IStudentFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Implimentations\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\School.Entities\School.Entities.csproj">
       <Project>{6495f657-5214-4057-a5f7-0aa70dd7c491}</Project>
