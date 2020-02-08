@@ -12,22 +12,26 @@ namespace School.Repository.Implimentations
     {
         public bool Create(FoodItem foodItem)
         {
+            //write code to insert data into database
             return true;
         }
 
         public bool Delete(int id)
         {
+            //write code to insert data into database
             return true;
         }
 
 
-        public Get(FoodItem foodItem)
+        public List<FoodItem> Get()
         {
-            return true;
+            //write code to insert data into database
+            return new List<FoodItem>();
         }
 
         public bool Update(int id, FoodItem foodItem)
         {
+            //write code to insert data into database
             return true;
         }
 

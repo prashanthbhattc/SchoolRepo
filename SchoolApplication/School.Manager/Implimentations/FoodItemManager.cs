@@ -32,9 +32,9 @@ namespace School.Manager.Implimentations
             return _foodItemRepository.Update(id, foodItem);
         }
 
-        public bool Get(FoodItem foodItem)
+        public List<FoodItem> Get()
         {
-            return _foodItemRepository.Get(foodItem);
+            return _foodItemRepository.Get();
         }
     }
 }
