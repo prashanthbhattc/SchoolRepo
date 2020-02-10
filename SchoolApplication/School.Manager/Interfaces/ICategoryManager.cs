@@ -12,7 +12,7 @@ namespace School.Manager.Interfaces
         bool Create(Category category);
         bool Update(int id,Category category);
         bool get(FoodItem foodItem) ;
-        bool Delete(int id);
+        bool Deletes(int id);
 
     }
 }

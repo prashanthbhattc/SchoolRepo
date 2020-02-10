@@ -28,7 +28,7 @@ namespace School.Manager.Implimentations
         }
 
         public bool Update(int id, FoodItem foodItem)
-        {
+         {
             return _foodItemRepository.Update(id, foodItem);
         }
 
