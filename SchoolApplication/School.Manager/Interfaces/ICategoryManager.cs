@@ -11,8 +11,8 @@ namespace School.Manager.Interfaces
     {
         bool Create(Category category);
         bool Update(int id,Category category);
-        bool get(FoodItem foodItem) ;
-        bool Deletes(int id);
+        IList<Category> Get() ;
+        bool Delete(int id);
 
     }
 }
