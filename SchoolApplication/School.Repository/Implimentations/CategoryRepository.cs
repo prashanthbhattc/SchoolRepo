@@ -19,7 +19,7 @@ namespace School.Repository.Implimentations
         public CategoryRepository()
         {
             connection = new
-                SqlConnection("Server=(local);DataBase=Northwind;Integrated Security=SSPI");//your connection string
+                SqlConnection("Data Source=DESKTOP-2B954VK;Initial Catalog=FoodManagement;Integrated Security=True");//your connection string
             command = new SqlCommand
             {
                 Connection = connection
@@ -30,11 +30,11 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
-                command.CommandText = "Sp_Name";//create your sp and add here
+                command.CommandText = "Sp_InsertCategory";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(
-                    new SqlParameter("@name", category.Name));
+                    new SqlParameter("@CategoryName", category.Name));
 
                 var rowsAffected = command.ExecuteNonQuery();
                 connection.Close();
