@@ -10,7 +10,7 @@ namespace School.Manager.Interfaces
     public interface IFoodItemManager
     {
         bool Create(FoodItem foodItem);
-        bool Delete(int id);
+        bool Delete(int id);  
         bool Update(int id,FoodItem foodItem);
         bool Get(FoodItem foodItem);
     }
