@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implimentations\CategoryRepository.cs" />
+    <Compile Include="Implimentations\FoodItemRepository.cs" />
     <Compile Include="Interfaces\ICategoryRepository.cs" />
     <Compile Include="Interfaces\IFoodItemRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

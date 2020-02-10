@@ -12,6 +12,6 @@ namespace School.Manager.Interfaces
         bool Create(FoodItem foodItem);
         bool Delete(int id);  
         bool Update(int id,FoodItem foodItem);
-        bool Get(FoodItem foodItem);
+        List<FoodItem> Get();
     }
 }
