@@ -12,6 +12,6 @@ namespace School.Repository.Interfaces
         bool Create(Category category);
         bool Update(int id, Category category);
         IList<Category> Get();
-        bool Delete(int id);
+        bool DEElete(int id);
     }
 }
