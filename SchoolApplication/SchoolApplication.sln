@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Repository", "School
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Common", "School.Common\School.Common.csproj", "{F386E91C-2343-47D5-BB60-325D42CDBA5B}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseQueris", "Database1\DatabaseQueris.sqlproj", "{725CBCC1-95C7-4159-8630-5F5476B36016}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,13 +41,19 @@ Global
 		{F386E91C-2343-47D5-BB60-325D42CDBA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F386E91C-2343-47D5-BB60-325D42CDBA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F386E91C-2343-47D5-BB60-325D42CDBA5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{725CBCC1-95C7-4159-8630-5F5476B36016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725CBCC1-95C7-4159-8630-5F5476B36016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725CBCC1-95C7-4159-8630-5F5476B36016}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{725CBCC1-95C7-4159-8630-5F5476B36016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725CBCC1-95C7-4159-8630-5F5476B36016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{725CBCC1-95C7-4159-8630-5F5476B36016}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35
 		SolutionGuid = {1920F4CB-9238-4B5F-825B-8B58DB499B1A}
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
