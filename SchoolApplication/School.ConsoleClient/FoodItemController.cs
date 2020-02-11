@@ -28,7 +28,7 @@ namespace School.ConsoleClient
             return _FoodItemManager.Delete(id);
         }
 
-        public bool Get(FoodItem foodItem)
+        public List<FoodItem> Get()
         {
             return _FoodItemManager.Get();
         }
