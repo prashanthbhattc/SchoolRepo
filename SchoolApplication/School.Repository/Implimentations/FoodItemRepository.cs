@@ -20,7 +20,7 @@ namespace School.Repository.Implimentations
         public FoodItemRepository()
         {
             connection = new
-                SqlConnection("Server=(local);DataBase=Northwind;Integrated Security=SSPI");//your connection string
+                SqlConnection("Data Source=LAPTOP-ANQRVFID;Initial Catalog=FoodManagement;Integrated Security=SSPI");//your connection string
             command = new SqlCommand
             {
                 Connection = connection
@@ -37,11 +37,11 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
-                command.CommandText = "Sp_Name";//create your sp and add here
+                command.CommandText = "Sp_InsertFoodItem";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(
-                    new SqlParameter("@name", foodItem.Name));
+                    new SqlParameter("@FoodName", foodItem.Name));
 
                 var rowsAffected = command.ExecuteNonQuery();
                 connection.Close();
@@ -73,11 +73,11 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
-                command.CommandText = "Sp_Name";//create your sp and add here
+                command.CommandText = "Sp_DeleteFoodItem";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(
-                    new SqlParameter("@id", id));
+                    new SqlParameter("@Foodid", id));
 
                 var rowsAffected = command.ExecuteNonQuery();
                 connection.Close();
@@ -109,7 +109,7 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
-                command.CommandText = "Sp_Name";//create your sp and add here
+                command.CommandText = "Sp_GetAllFoodItem ";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -119,12 +119,12 @@ namespace School.Repository.Implimentations
                 {
                     items.Add(new FoodItem
                     {
-                        Id = Convert.ToInt32(reader["Id"]),
-                        Name = reader["Name"].ToString(),
+                        Id = Convert.ToInt32(reader["FoodId"]),
+                        Name = reader["FoodName"].ToString(),
                         category = new Category
                         {
-                            Id = Convert.ToInt32(reader["categoryId"]),
-                            Name = reader["CategoryName"].ToString()
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Name = reader["Name"].ToString()
                         }
                     });
                 }
@@ -156,11 +156,13 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
-                command.CommandText = "Sp_Name";//create your sp and add here
+                command.CommandText = "Sp_UpdateFoodItem ";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(
-                    new SqlParameter("@name", foodItem.Name));
+                    new SqlParameter("@FoodId", id));
+                command.Parameters.Add(
+                    new SqlParameter("@FoodName", foodItem.Name));
 
                 var rowsAffected = command.ExecuteNonQuery();
                 connection.Close();
@@ -185,4 +187,3 @@ namespace School.Repository.Implimentations
 
     }
 }
-

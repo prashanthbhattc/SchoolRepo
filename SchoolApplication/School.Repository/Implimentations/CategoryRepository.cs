@@ -21,7 +21,7 @@ namespace School.Repository.Implimentations
         public CategoryRepository()
         {
             connection = new
-                SqlConnection("Data Source=DESKTOP-2B954VK;Initial Catalog=FoodManagement;Integrated Security=True");//your connection string
+                SqlConnection("Data Source=LAPTOP-ANQRVFID;Initial Catalog=FoodManagement;Integrated Security=True");//your connection string
             command = new SqlCommand
             {
                 Connection = connection
@@ -71,7 +71,7 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
-                command.CommandText = "Sp_Name";//create your sp and add here
+                command.CommandText = "Sp_DeleteCategory";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(
@@ -106,7 +106,7 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
-                command.CommandText = "Sp_Name";//create your sp and add here
+                command.CommandText = "Sp_GetAllCategory";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -148,9 +148,11 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
-                command.CommandText = "Sp_Name";//create your sp and add here
+                command.CommandText = "Sp_UpdateCategory";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
+                 command.Parameters.Add(
+                    new SqlParameter("@Id", id));
                 command.Parameters.Add(
                     new SqlParameter("@name", category.Name));
 
