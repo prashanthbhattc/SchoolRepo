@@ -57,6 +57,7 @@ namespace School.Repository.Implimentations
             {
                 if (connection != null)
                 {
+                    command.Parameters.Clear();
                     connection.Close();
                 }
             }
@@ -91,6 +92,7 @@ namespace School.Repository.Implimentations
             {
                 if (connection != null)
                 {
+                    command.Parameters.Clear();
                     connection.Close();
                 }
             }
@@ -132,6 +134,7 @@ namespace School.Repository.Implimentations
             {
                 if (connection != null)
                 {
+                    command.Parameters.Clear();
                     connection.Close();
                 }
             }
@@ -170,6 +173,7 @@ namespace School.Repository.Implimentations
             {
                 if (connection != null)
                 {
+                    command.Parameters.Clear();
                     connection.Close();
                 }
             }
