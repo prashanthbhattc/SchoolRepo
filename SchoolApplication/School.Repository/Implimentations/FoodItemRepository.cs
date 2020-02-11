@@ -37,11 +37,14 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
+               
                 command.CommandText = "Sp_InsertFoodItem";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(
                     new SqlParameter("@FoodName", foodItem.Name));
+                command.Parameters.Add(
+                    new SqlParameter("@CategoryId", foodItem.category.Id));
 
                 var rowsAffected = command.ExecuteNonQuery();
                 connection.Close();
@@ -109,7 +112,7 @@ namespace School.Repository.Implimentations
             try
             {
                 connection.Open();
-                command.CommandText = "Sp_GetAllFoodItem ";//create your sp and add here
+                command.CommandText = "Sp_GetAllFoodItem";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -119,19 +122,19 @@ namespace School.Repository.Implimentations
                 {
                     items.Add(new FoodItem
                     {
-                        Id = Convert.ToInt32(reader["FoodId"]),
+                        Id = Convert.ToInt32(reader["Id"]),
                         Name = reader["FoodName"].ToString(),
                         category = new Category
                         {
-                            Id = Convert.ToInt32(reader["Id"]),
-                            Name = reader["Name"].ToString()
+                            Id = Convert.ToInt32(reader["Categoryid"]),
+                            Name = reader["categoryname"].ToString()
                         }
                     });
                 }
 
             }
 
-            catch (Exception)
+            catch (Exception Ex)
             {
                 return null;
             }
