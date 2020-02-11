@@ -11,7 +11,7 @@ namespace School.Repository.Interfaces
     {
         bool Create(FoodItem foodItem);
         bool Delete(int id);
-        bool Rename(int id, FoodItem foodItem);
+        bool Update(int id, FoodItem foodItem);
         List<FoodItem> Get();
     }
 }
