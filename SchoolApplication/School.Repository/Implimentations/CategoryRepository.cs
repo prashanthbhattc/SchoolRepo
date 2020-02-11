@@ -15,7 +15,9 @@ namespace School.Repository.Implimentations
 
         private SqlConnection connection = null;
         private SqlCommand command = null;
-
+        /// <summary>
+        /// 
+        /// </summary>
         public CategoryRepository()
         {
             connection = new
@@ -25,6 +27,11 @@ namespace School.Repository.Implimentations
                 Connection = connection
             };
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="category"></param>
+        /// <returns></returns>
         public bool Create(Category category)
         {
             try
@@ -54,7 +61,11 @@ namespace School.Repository.Implimentations
                 }
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool Delete(int id)
         {
             try
@@ -84,7 +95,10 @@ namespace School.Repository.Implimentations
                 }
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IList<Category> Get()
         {
             List<Category> items = new List<Category>();
@@ -123,7 +137,12 @@ namespace School.Repository.Implimentations
             }
             return items;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="category"></param>
+        /// <returns></returns>
         public bool Update(int id, Category category)
         {
             try
