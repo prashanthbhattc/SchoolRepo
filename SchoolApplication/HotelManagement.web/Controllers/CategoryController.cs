@@ -31,7 +31,7 @@ namespace HotelManagement.web.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(int id)
         {
             return View();
         }
