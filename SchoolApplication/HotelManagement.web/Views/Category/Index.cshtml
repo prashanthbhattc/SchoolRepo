@@ -1,4 +1,6 @@
 ﻿@using School.Entities
+
+@model List<Category>
 @{
     ViewBag.Title = "Index";
 
@@ -33,6 +35,30 @@
 </table>
 
 <hr/>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td><button type="button" class="btn btn-primary">Edit</button></td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
 
 <table class="table table-bordered">
     <thead>

@@ -23,7 +23,7 @@ namespace HotelManagement.web.Controllers
             ViewData["category"] = categories;
 
             ViewBag.Mydata = categories;
-            return View();
+            return View(categories);
         }
 
         public ActionResult Add()
