@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace School.Entities
 {
-   public  class Category: EntityBase
+    public class CategoryFilter
     {
-        
         public string Name { get; set; }
-        
     }
 }

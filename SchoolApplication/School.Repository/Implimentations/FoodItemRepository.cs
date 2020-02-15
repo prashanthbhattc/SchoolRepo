@@ -10,21 +10,15 @@ using System.Threading.Tasks;
 
 namespace School.Repository.Implimentations
 {
-    public class FoodItemRepository : IFoodItemRepository
+    public class FoodItemRepository : RepositoryBase, IFoodItemRepository
     {
-        private SqlConnection connection = null;
-        private SqlCommand command = null;
+        
         /// <summary>
         /// this is constructor
         /// </summary>
         public FoodItemRepository()
         {
-            connection = new
-                SqlConnection("Data Source=LAPTOP-ANQRVFID;Initial Catalog=FoodManagement;Integrated Security=SSPI");//your connection string
-            command = new SqlCommand
-            {
-                Connection = connection
-            };
+            
         }
 
         /// <summary>
@@ -136,7 +130,7 @@ namespace School.Repository.Implimentations
 
             }
 
-            catch (Exception Ex)
+            catch (Exception )
             {
                 return null;
             }

@@ -60,7 +60,16 @@
     <Folder Include="StoredProcedure" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Table\test.sql" />
-    <Build Include="StoredProcedure\test1.sql" />
+    <Build Include="Table\Category.sql" />
+    <Build Include="StoredProcedure\Sp_InsertCategory.sql" />
+    <Build Include="StoredProcedure\Sp_GetAllFoodItem.sql" />
+    <Build Include="Table\FoodItem.sql" />
+    <Build Include="StoredProcedure\Sp_DeleteCategory.sql" />
+    <Build Include="StoredProcedure\Sp_UpdateCategory.sql" />
+    <Build Include="StoredProcedure\Sp_GetAllCategory.sql" />
+    <Build Include="StoredProcedure\Sp_UpdateFoodItem.sql" />
+    <Build Include="StoredProcedure\Sp_InsertFoodItem.sql" />
+    <Build Include="StoredProcedure\Sp_DeleteFoodItem.sql" />
+    <Build Include="StoredProcedure\Sp_GetAllCategoryFilter.sql" />
   </ItemGroup>
 </Project>
