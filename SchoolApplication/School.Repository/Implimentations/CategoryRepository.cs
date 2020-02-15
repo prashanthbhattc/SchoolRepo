@@ -10,39 +10,33 @@ using System.Threading.Tasks;
 
 namespace School.Repository.Implimentations
 {
-    public class CategoryRepository : ICategoryRepository
+    public class CategoryRepository : RepositoryBase,ICategoryRepository
     {
 
-        private SqlConnection connection = null;
-        private SqlCommand command = null;
+        
         /// <summary>
         /// 
         /// </summary>
         public CategoryRepository()
         {
-            connection = new
-                SqlConnection("Data Source=LAPTOP-ANQRVFID;Initial Catalog=FoodManagement;Integrated Security=True");//your connection string
-            command = new SqlCommand
-            {
-                Connection = connection
-            };
+            
         }
         /// <summary>
-        /// 
+        /// this is used to create category
         /// </summary>
-        /// <param name="category"></param>
-        /// <returns></returns>
+        /// <param name="category">this is catgory</param>
+        /// <returns>if saved true else fasle</returns>
         public bool Create(Category category)
         {
             try
             {
-                connection.Open();
+                
                 command.CommandText = "Sp_InsertCategory";//create your sp and add here
 
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(
                     new SqlParameter("@CategoryName", category.Name));
-
+                connection.Open();
                 var rowsAffected = command.ExecuteNonQuery();
                 connection.Close();
                 var result = rowsAffected > 1 ? true : false;
@@ -84,7 +78,7 @@ namespace School.Repository.Implimentations
                 return result;
             }
 
-            catch (Exception)
+            catch (Exception )
             {
                 return false;
             }
@@ -116,6 +110,7 @@ namespace School.Repository.Implimentations
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
+                   
                     items.Add(new Category
                     {
                         Id = Convert.ToInt32(reader["Id"]),
@@ -140,6 +135,49 @@ namespace School.Repository.Implimentations
             }
             return items;
         }
+
+        public IList<Category> Get(CategoryFilter filter)
+        {
+            List<Category> items = new List<Category>();
+
+            try
+            {
+                connection.Open();
+                command.CommandText = "Sp_GetAllCategoryFilter";//create your sp and add here
+
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add(
+                    new SqlParameter("@CategoryName", filter.Name));
+
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    items.Add(new Category
+                    {
+                        Id = Convert.ToInt32(reader["Id"]),
+                        Name = reader["Name"].ToString(),
+
+                    });
+                }
+
+            }
+
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    command.Parameters.Clear();
+                    connection.Close();
+                }
+            }
+            return items;
+        }
+
         /// <summary>
         /// 
         /// </summary>
