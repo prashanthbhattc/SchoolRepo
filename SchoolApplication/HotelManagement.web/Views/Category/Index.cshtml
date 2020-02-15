@@ -2,7 +2,8 @@
 @{
     ViewBag.Title = "Index";
 
-    var data = ViewData["cat"] as List<Category>;
+    var data1 = ViewData["category"] as List<Category>;
+   var data2 = ViewBag.Mydata  as List<Category>;
 }
 
 <h2>Categories</h2>
@@ -17,10 +18,36 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in data)
+        @foreach (var item in data1)
         {
             <tr>
                
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td><button type="button" class="btn btn-primary">Edit</button></td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+
+<hr/>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in data2)
+        {
+            <tr>
+
                 <td>@item.Id</td>
                 <td>@item.Name</td>
                 <td><button type="button" class="btn btn-primary">Edit</button></td>

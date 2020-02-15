@@ -20,7 +20,9 @@ namespace HotelManagement.web.Controllers
         public ActionResult Index()
         {
             var categories = _categoryManager.Get();
-            ViewData["cat"] = categories;
+            ViewData["category"] = categories;
+
+            ViewBag.Mydata = categories;
             return View();
         }
 
