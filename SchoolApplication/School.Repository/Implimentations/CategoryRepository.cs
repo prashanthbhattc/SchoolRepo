@@ -36,6 +36,9 @@ namespace School.Repository.Implimentations
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(
                     new SqlParameter("@CategoryName", category.Name));
+
+                command.Parameters.Add(
+                    new SqlParameter("@Discount", category.Discount));
                 connection.Open();
                 var rowsAffected = command.ExecuteNonQuery();
                 connection.Close();
@@ -115,6 +118,7 @@ namespace School.Repository.Implimentations
                     {
                         Id = Convert.ToInt32(reader["Id"]),
                         Name = reader["Name"].ToString(),
+                        Discount=Convert.ToDouble(reader["Discount"])
                         
                     });
                 }
@@ -196,7 +200,8 @@ namespace School.Repository.Implimentations
                     new SqlParameter("@Id", id));
                 command.Parameters.Add(
                     new SqlParameter("@name", category.Name));
-
+                command.Parameters.Add(
+                   new SqlParameter("@Discount", category.Discount));
                 var rowsAffected = command.ExecuteNonQuery();
                 connection.Close();
                 var result = rowsAffected > 1 ? true : false;
