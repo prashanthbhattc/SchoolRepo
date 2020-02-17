@@ -1,10 +1,5 @@
 ﻿
--- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
--- =============================================
-CREATE PROCEDURE Sp_GetAllFoodItem
+CREATE PROCEDURE [dbo].[Sp_GetAllFoodItem]
 	
 
 AS
@@ -14,9 +9,10 @@ BEGIN
  f.Id,
  f.FoodName,
  f.CategoryId,
+ f.price,
+ 
  c.[Name] as categoryname 
  from FoodItem f 
  JOIN Category c on f.CategoryId=c.Id
 
 END
-GO

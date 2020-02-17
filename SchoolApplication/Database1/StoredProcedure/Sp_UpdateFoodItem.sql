@@ -1,18 +1,13 @@
-﻿-- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
--- =============================================
-CREATE PROCEDURE Sp_UpdateFoodItem
-	-- Add the parameters for the stored procedure here
+﻿
+create PROCEDURE [dbo].[Sp_UpdateFoodItem]
+	
 	@FoodId int,
-	@FoodName Varchar(200)
+	@FoodName Varchar(200),
+	@price money
 AS
 BEGIN
 	
 
-    -- Insert statements for procedure here
-	Update FoodItem set FoodName=@FoodName where Id=@FoodId
+   
+	Update FoodItem set FoodName=@FoodName,price=@price where Id=@FoodId
 END
-GO
-

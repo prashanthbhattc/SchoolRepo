@@ -1,17 +1,13 @@
-﻿-- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
--- =============================================
-CREATE PROCEDURE Sp_InsertFoodItem
-	-- Add the parameters for the stored procedure here
+﻿
+Create PROCEDURE [dbo].[Sp_InsertFoodItem]
+	
 	@FoodName varchar(200),
-	@CategoryId int
+	@CategoryId int,
+	@Price money
 
 AS
 BEGIN
-		    -- Insert statements for procedure here
-insert into FoodItem(FoodName,CategoryId) values(@FoodName,@CategoryId)
+		  
+insert into FoodItem(FoodName,CategoryId,Price) values(@FoodName,@CategoryId,@Price)
 
 END
-GO
