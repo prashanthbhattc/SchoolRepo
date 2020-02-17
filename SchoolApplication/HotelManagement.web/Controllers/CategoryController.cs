@@ -1,4 +1,5 @@
-﻿using School.Manager.Implimentations;
+﻿using School.Entities;
+using School.Manager.Implimentations;
 using School.Manager.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,14 @@ namespace HotelManagement.web.Controllers
         public ActionResult Add()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Add(Category c)
+        {
+            _categoryManager.Create(c);
+            var categories = _categoryManager.Get();
+            return View("Index", categories);
         }
 
         public ActionResult Edit(int id)

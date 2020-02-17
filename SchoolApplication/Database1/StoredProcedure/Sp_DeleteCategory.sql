@@ -5,10 +5,10 @@
 -- =============================================
 CREATE PROCEDURE Sp_DeleteCategory
 	-- Add the parameters for the stored procedure here
-	@Id int
+	@Id INT
 AS
 BEGIN
 	
-	delete from Category where Id=@Id
+	DELETE FROM Category WHERE Id=@Id
 END
 GO

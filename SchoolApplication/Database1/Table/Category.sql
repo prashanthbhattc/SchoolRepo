@@ -2,7 +2,7 @@
 (
 	Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	Name VARCHAR(200) NOT NULL,
-	Discount decimal(5,3) NOT NULL
+	Discount INT NOT NULL
 
 )
 

@@ -5,11 +5,13 @@
 -- =============================================
 Create  PROCEDURE Sp_UpdateCategory
 	-- Add the parameters for the stored procedure here
-	@Id int,
-	@Name varchar(200)
+	@Id INT,
+	@Name VARCHAR(200),
+	@Discount INT
 AS
 BEGIN
 	
     -- Insert statements for procedure here
-	Update Category set [Name]=@Name where Id=@Id
+	UPDATE Category SET [Name]=@Name, Discount=@Discount WHERE Id=@Id
 END
+GO

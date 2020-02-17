@@ -11,7 +11,7 @@ namespace School.Entities
         
         public string Name { get; set; }
 
-        public double Discount { get; set; }
+        public int Discount { get; set; }
 
     }
 }

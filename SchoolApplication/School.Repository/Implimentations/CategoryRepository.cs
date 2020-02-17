@@ -46,7 +46,7 @@ namespace School.Repository.Implimentations
                 return result;
             }
 
-            catch (Exception)
+            catch (Exception )
             {
                 return false;
             }
@@ -118,7 +118,7 @@ namespace School.Repository.Implimentations
                     {
                         Id = Convert.ToInt32(reader["Id"]),
                         Name = reader["Name"].ToString(),
-                        Discount=Convert.ToDouble(reader["Discount"])
+                        Discount=Convert.ToInt32(reader["Discount"])
                         
                     });
                 }
