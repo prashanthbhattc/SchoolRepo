@@ -15,7 +15,7 @@ namespace School.Repository.Implimentations
         public RepositoryBase()
         {
             connection = new
-                SqlConnection("Data Source=LAPTOP-ANQRVFID;Initial Catalog=FoodManagement;Integrated Security=True");//your connection string
+                SqlConnection("Data Source=.;Initial Catalog=FoodManagement;Integrated Security=True");//your connection string
             command = new SqlCommand
             {
                 Connection = connection

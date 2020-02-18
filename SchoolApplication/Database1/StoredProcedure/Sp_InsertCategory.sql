@@ -4,7 +4,7 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE Sp_InsertCategory
+ CREATE PROCEDURE Sp_InsertCategory
 	-- Add the parameters for the stored procedure here
 	@CategoryName VARCHAR(200),
 	@Discount INT
