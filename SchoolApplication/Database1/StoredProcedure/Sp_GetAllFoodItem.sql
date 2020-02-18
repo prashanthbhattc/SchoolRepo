@@ -1,5 +1,5 @@
 ﻿
-CREATE PROCEDURE [dbo].[Sp_GetAllFoodItem]
+create PROCEDURE [dbo].[Sp_GetAllFoodItem]
 	
 
 AS
