@@ -5,7 +5,7 @@
 	FoodName varchar(100) NOT NULL,
 	Price money NOT NULL,
 	CategoryId int 
-	constraint fk_id foreign key(Id) references Category(Id) NOT NULL )
+	constraint fk_id foreign key(CategoryId) references Category(Id) NOT NULL )
 
 
 

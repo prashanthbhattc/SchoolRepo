@@ -6,9 +6,7 @@
 @{
     ViewBag.Title = "Index";
 
-    var data1 = ViewData["fooditem"] as List<FoodItem>;
-    var data2 = ViewBag.Mydata as List<FoodItem>;
-    var data3 = ViewBag.Mydata as List<Category>;
+    
 
 }
 
@@ -18,37 +16,54 @@
 
 @Html.ActionLink("Create", actionName: "Add", controllerName: "FoodItem", routeValues: null, htmlAttributes: new { @class = "btn btn-primary" })
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
+@*<table class="table table-bordered">
+        <thead>
+            <tr>
 
-            <th scope="col">Id</th>
-            <th scope="col">Name</th>
-            <th scope="col">CategoryId</th>
-            <th scope="col">CategoryName</th>
-            <th scope="col">Action</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">CategoryId</th>
+                <th scope="col">CategoryName</th>
+                <th scope="col">Action</th>
 
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
 
-            <td>@item.Id</td>
-            <td>@item.Name</td>
-            <td>@item.category.Id</td>
-            <td>@item.category.Name</td>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.category.Id</td>
+                <td>@item.category.Name</td>
 
-            <td>
-                @Html.ActionLink("Edit", actionName: "edit", controllerName: "FoodItem", routeValues: new { id = item.Id }, htmlAttributes: new { @class = "btn btn-primary" })
+                <td>
+                    @Html.ActionLink("Edit", actionName: "edit", controllerName: "FoodItem", routeValues: new { id = item.Id }, htmlAttributes: new { @class = "btn btn-primary" })
 
 
-            </td>
-        </tr>
+                </td>
+            </tr>
 
-        }
+            }
 
-    </tbody>
-</table>
+        </tbody>
+    </table>*@
 
+<div class="row">
+
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3">
+            <div class="card" >
+                <img class="card-img-top" src="~/Content/Images/download.jpg" alt="Card image cap" height="300" width="400">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    @Html.ActionLink("Edit", actionName: "edit", controllerName: "FoodItem", routeValues: new { id = item.Id }, htmlAttributes: new { @class = "btn btn-primary" })
+                </div>
+            </div>
+            </div>
+            }
+ </div>
